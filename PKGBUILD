@@ -1,3 +1,4 @@
+# Maintainer Sukhov Daniil <tech@accountt.ru> https://github.com/BlueVihor
 pkgname=wallpicker
 pkgver=1.0
 pkgrel=1
@@ -7,12 +8,13 @@ makedepends=('git'
   'feh'
   'rofi')
 
-prepare() {
-  cd "$srcdir/$pkgname"
+prepare() {=
+  git clone https://github.com/BlueVihor/Wallpicker.git
+  cd Wallpicker
 }
 
 package() {
-  cd "$srcdir/$pkgname"
-  cp wallpicker "/usr/bin/"
-  chmod 777 "/usr/bin/wallpicker"
+  cd Wallpicker
+  sudo cp wallpicker "/usr/bin/"
+  sudo chmod 777 "/usr/bin/wallpicker"
 }
