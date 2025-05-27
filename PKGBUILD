@@ -17,4 +17,5 @@ package() {
   cd Wallpicker
   sudo cp wallpicker "/usr/bin/"
   sudo chmod 777 "/usr/bin/wallpicker"
+  install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
